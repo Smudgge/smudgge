@@ -8,8 +8,4 @@
 # 8""88888P'  o888o o888o o888o  `V88V"V8P' `Y8bod88P" `8oooooo.  `Y8bod8P' 
 #                                                      d"     YD            
 #                                                      "Y88888P'            
-
-Currently Working On:
-- Leaf
-- Website
 ```
