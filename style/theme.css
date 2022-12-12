@@ -2,7 +2,7 @@
 ====================         ====================*/
 :root {
     --c1: #0D1117;
-    --cl1: #262b33;
+    --cl1: #424449;
     --c2: #fff6fe;
     --c3: #BBFDAD;
     --c4: #ff80a9;
@@ -35,6 +35,13 @@ body {
 
 .fg-4 {
     color: var(--c4);
+}
+
+.fg-l1:hover,
+.fg-l1:hover {
+    color: var(--c3);
+    fill: var(--c3);
+    opacity: 0;
 }
 
 .bg-1 {
