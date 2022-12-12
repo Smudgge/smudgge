@@ -1,0 +1,54 @@
+/*                   Colours
+====================         ====================*/
+:root {
+    --c1: #0D1117;
+    --cl1: #262b33;
+    --c2: #fff6fe;
+    --c3: #BBFDAD;
+    --c4: #ff80a9;
+}
+
+/*                   Default
+====================         ====================*/
+body {
+    background-color: var(--c1);
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+}
+
+/*                   Classes
+====================         ====================*/
+.fg-1 {
+    color: var(--c1);
+}
+
+.fg-l1 {
+    color: var(--cl1);
+}
+
+.fg-2 {
+    color: var(--c2);
+}
+
+.fg-3 {
+    color: var(--c3);
+}
+
+.fg-4 {
+    color: var(--c4);
+}
+
+.bg-1 {
+    background-color: var(--c1);
+}
+
+.bg-2 {
+    background-color: var(--c2);
+}
+
+.bg-3 {
+    background-color: var(--c3);
+}
+
+.bg-4 {
+    background-color: var(--c4);
+}

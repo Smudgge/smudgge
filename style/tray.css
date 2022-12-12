@@ -1,0 +1,20 @@
+/*                   Colours
+====================         ====================*/
+:root {
+    --c1: #0D1117;
+    --t1: #161c22;
+    --t2: #242629
+}
+
+/*                   Classes
+====================         ====================*/
+.tray {
+    border-radius: 10px;
+    border: 4px solid var(--t2);
+}
+
+.opaque-tray {
+    border-radius: 10px;
+    border: 4px solid var(--c1);
+    background-color: var(--t1);
+}
