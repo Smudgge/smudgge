@@ -37,13 +37,6 @@ body {
     color: var(--c4);
 }
 
-.fg-l1:hover,
-.fg-l1:hover {
-    color: var(--c3);
-    fill: var(--c3);
-    opacity: 0;
-}
-
 .bg-1 {
     background-color: var(--c1);
 }
