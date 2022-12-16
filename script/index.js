@@ -4,6 +4,21 @@ const tab = document.getElementById("tab")
 document.addEventListener("scroll", (event) => {
     var scroll = window.scrollY
     tab.style.opacity = (scroll * 0.005) - 2
+
+    var x = document.getElementsByClassName("link");
+    for (var i = 0; i < x.length; i++) {
+      x[i].style.opacity = - (scroll * 0.005) + 2
+    }
+
+    if (tab.style.opacity > 0.9) {
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none"
+        }
+    } else {
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "block"
+        }
+    }
 })
 
 setSection("music")

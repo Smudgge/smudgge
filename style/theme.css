@@ -97,3 +97,8 @@ body {
 .border-hover-4:focus {
     border-top: var(--c4) solid 3px;
 }
+
+.fill-hover-4:hover,
+.fill-hover-4:focus {
+    fill: var(--c4);
+}

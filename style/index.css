@@ -115,14 +115,7 @@ html {
     width: 600px;
     position: absolute;
     bottom: 0px;
-
     transition: 0.5s;
-}
-
-.line {
-    position: relative;
-    padding: 0.8em 0em;
-    width: 100%;
 }
 
 .title-section .header {
@@ -130,6 +123,27 @@ html {
     margin: 0;
     padding: 0.5em;
     text-decoration: underline;
+}
+
+.title-section .links-wrapper {
+    position: fixed;
+    display: flex;
+    top: 1em;
+    left: 1em;
+    gap: 1em;
+    z-index: 100;
+}
+
+.title-section .links-wrapper svg {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.line {
+    position: relative;
+    padding: 0.8em 0em;
+    width: 100%;
 }
 
 .down-arrow {
@@ -303,6 +317,10 @@ html {
     .title-section .left img {
         width: 300px;
     }
+    .title-section .links-wrapper svg {
+        width: 50px;
+        height: 50px;
+    }
 }
 @media (max-width: 45em) {
     .box-items-button h1 {
@@ -343,6 +361,10 @@ html {
     }
     .box-dropdown h2 {
         font-size: 1rem;
+    }
+    .title-section .links-wrapper svg {
+        width: 40px;
+        height: 40px;
     }
 }
 @media (max-width: 30em) {
