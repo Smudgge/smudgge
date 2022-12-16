@@ -35,5 +35,6 @@ function openDropdown(svg, element) {
 
 function scroll100() {
     let pageHeight = window.innerHeight;
-    window.scrollBy(0, pageHeight);
+    let scroll = window.scrollY;
+    window.scrollBy(0, pageHeight - scroll);
 }
