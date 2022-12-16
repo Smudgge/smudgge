@@ -28,6 +28,8 @@ html {
     top: 0;
     left: 0;
     width: 100%;
+    border-left: none;
+    border-right: none;
 }
 
 .tab .tab-button {
