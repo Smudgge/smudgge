@@ -7,6 +7,8 @@ var g = svg.querySelector("g")
 var WIDTH, COLS, ROWS, TOTAL, CENTERX, CENTERY
 var gridIsBuilding = false
 
+var reset = false
+
 function setWindowValues(){
     minFactor = Math.min(svg.clientWidth, svg.clientHeight)
     WIDTH = minFactor > 1200 ? 65 : minFactor > 950 ? 55 : minFactor > 750 ? 45 : 35
@@ -28,7 +30,6 @@ var themes = {
 }
 
 async function buildGrid(doDelay = true) {
-    console.log("test")
     setWindowValues()
     if(doDelay) await delay(2000)
     let theme = themes["Raindrops"]
@@ -42,7 +43,9 @@ async function buildGrid(doDelay = true) {
 }
 
 body.onload = () => buildGrid(false)
-addEventListener("resize", (event) => {buildGridt(true)});
+addEventListener("resize", (event) => {
+    reset = true
+});
 
 async function rainDrops() {
 
@@ -67,6 +70,11 @@ async function rainDrops() {
 
         for (var pos = 0; pos <= ROWS; pos++) {
             if (pos == ROWS) {
+                if (reset) {
+                    reset = false
+                    buildGrid(true)
+                    return false
+                }
                 colIterator(start, time)
             }
 

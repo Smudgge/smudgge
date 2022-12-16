@@ -1,13 +1,61 @@
-/*                   Classes
+/*                   Default
 ====================         ====================*/
 a {
     text-decoration: none;
 }
 
+h2 {
+    margin: 0;
+}
+
+/*                   Tab
+====================         ====================*/
+.tab {
+    position: fixed;
+    opacity: 0;
+    z-index: 10;
+    display: flex;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.tab .tab-button {
+    position: relative;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    padding: 0;
+}
+
+.tab .tab-button svg {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0.5em;
+}
+
+.tab .tab-button p {
+    margin: 0.5em;
+    height: 100%;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.tab .tab-button:hover,
+.tab .tab-button:focus {
+    background-color: #191919;
+    border-radius: 1em;
+}
+
+/*                   Menu
+====================         ====================*/
 .menu {
     width: 100%;
     height: 100vh;
-
     position: relative;
     display: flex;
 }
@@ -62,7 +110,7 @@ a {
 .line {
     position: relative;
     padding: 0.8em 0em;
-    width: 100vh;
+    width: 100%;
 }
 
 .menu .header {
@@ -70,6 +118,105 @@ a {
     margin: 0;
     padding: 0.5em;
     text-decoration: underline;
+}
+
+/*                   Section
+====================         ====================*/
+.section {
+    margin: 0;
+    min-height: 82vh;
+    width: 100%;
+    padding: 4em 0em;
+    position: relative;
+    display: none;
+    justify-content: center;
+}
+
+/*                   Boxes
+====================         ====================*/
+
+.box {
+    position: relative;
+}
+
+.box-image img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.box-items {
+    display: flex;
+    align-items: stretch;
+    gap: 1.5em;
+    margin: 1em 0em;
+}
+
+.box-dropdown .box-items {
+    display: block;
+    margin: 1em 0em;
+}
+
+.box-dropdown {
+    display: none;
+}
+
+.box-items-button {
+    display: flex;
+    gap: 1.5em;
+}
+
+.box-items-button svg {
+    rotate: 90deg;
+}
+
+.box-items-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.box-items svg {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+.box-full {
+    margin: 1em;
+    padding: 0em 1em;
+    border-right: none;
+    border-left: none;
+}
+
+.box p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.box h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.box h2 {
+    font-size: 1.2rem;
+}
+
+.box button {
+    border: none;
+    padding: 0;
+}
+
+.box button h1:hover,
+.box button h1:focus,
+.box button h2:hover,
+.box button h2:focus {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /*                   Media
@@ -110,7 +257,7 @@ a {
         width: 300px;
     }
 }
-@media (max-width: 30em) {
+@media (max-width: 35em) {
     .menu .right h1 {
         font-size: 2.5rem;
     }
