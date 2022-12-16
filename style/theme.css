@@ -52,16 +52,20 @@ body {
     color: var(--c4);
 }
 
-.f-l1 {
+.fill-l1 {
     fill: var(--cl1);
 }
 
-.f-2 {
+.fill-2 {
     fill: var(--c2);
 }
 
-.f-3 {
+.fill-3 {
     fill: var(--c3);
+}
+
+.fill-4 {
+    fill: var(--c4);
 }
 
 .bg-1 {
@@ -80,11 +84,16 @@ body {
     background-color: var(--c4);
 }
 
-.b {
+.border {
     border: 3px solid var(--b);
 }
 
-.b-1 {
+.border-padding {
     padding: 0.1em;
     border: 3px solid var(--b);
+}
+
+.border-hover-4:hover,
+.border-hover-4:focus {
+    border-top: var(--c4) solid 3px;
 }

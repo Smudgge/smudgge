@@ -3,7 +3,7 @@ const tab = document.getElementById("tab")
 // Tab 
 document.addEventListener("scroll", (event) => {
     var scroll = window.scrollY
-    tab.style.opacity = (scroll * 0.01) - 6.5
+    tab.style.opacity = (scroll * 0.005) - 2
 })
 
 setSection("music")
@@ -31,4 +31,9 @@ function openDropdown(svg, element) {
         document.getElementById(element).style.display = "none"
         document.getElementById(svg).style.rotate = "90deg"
     }
+}
+
+function scroll100() {
+    let pageHeight = window.innerHeight;
+    window.scrollBy(0, pageHeight);
 }

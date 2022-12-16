@@ -7,7 +7,8 @@ var g = svg.querySelector("g")
 var WIDTH, COLS, ROWS, TOTAL, CENTERX, CENTERY
 var gridIsBuilding = false
 
-var reset = false
+var activeGrids = []
+var currentUUID = 0
 
 function setWindowValues(){
     minFactor = Math.min(svg.clientWidth, svg.clientHeight)
@@ -39,15 +40,21 @@ async function buildGrid(doDelay = true) {
     body.className = theme.className || ""
 
     buildBoxes(theme.base, 15)
-    theme.func()
+    activeGrids = []
+    theme.func(currentUUID)
+    currentUUID = currentUUID + 1
 }
 
 body.onload = () => buildGrid(false)
+
 addEventListener("resize", (event) => {
-    reset = true
+    buildGrid(false)
 });
 
-async function rainDrops() {
+async function rainDrops(uuid) {
+
+    activeGrids.push(uuid)
+    console.log(activeGrids)
 
     let rain = themes["Raindrops"]
     
@@ -68,20 +75,21 @@ async function rainDrops() {
         //iterators gonna iterate
         if(gridIsBuilding) return false;
 
+        if (!activeGrids.includes(uuid)) return false
+
         for (var pos = 0; pos <= ROWS; pos++) {
             if (pos == ROWS) {
-                if (reset) {
-                    reset = false
-                    buildGrid(true)
-                    return false
-                }
                 colIterator(start, time)
             }
 
-            let target = getTarget(pos, start)
-            target.setAttribute("fill", rain.solid1)
-            await delay(time)
-            target.setAttribute("fill", rain.base)
+            try {
+                let target = getTarget(pos, start)
+                target.setAttribute("fill", rain.solid1)
+                await delay(time)
+                target.setAttribute("fill", rain.base)
+            } catch (error) {
+                return false
+            }
         }
     }
 }
