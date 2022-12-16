@@ -17,6 +17,35 @@ html {
     scroll-behavior: smooth;
 }
 
+/*                   Hovers
+====================         ====================*/
+.hover-1 {
+    --h: 1.2em;
+    line-height: var(--h);
+    color: #0000;
+    text-shadow:
+        0 calc(-1*var(--_t,0em)) var(--c2), 
+        0 calc(var(--h) - var(--_t,0em)) var(--c1);
+    overflow: hidden;
+    transition: .3s;
+}
+
+.hover-1:hover {
+    --_t: var(--h);
+    text-shadow: 
+        0 calc(-1*var(--_t,0em)) var(--c1), 
+        0 calc(var(--h) - var(--_t,0em)) var(--c3);
+}
+
+.hover-2 {
+    transition: 0.5s;
+}
+
+.hover-2:hover {
+    color: #fff;
+    text-shadow: 0 0 40px #ffffff;
+}
+
 /*                   Tab
 ====================         ====================*/
 .tab {
@@ -224,6 +253,7 @@ html {
 
 .box-items-button svg {
     rotate: 90deg;
+    transition: 0.5s;
 }
 
 .box-items-item {
