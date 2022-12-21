@@ -21,7 +21,7 @@ document.addEventListener("scroll", (event) => {
     }
 })
 
-setSection("music")
+setSection("projects")
 
 function setSection(section) {
     var x = document.getElementsByClassName("section");

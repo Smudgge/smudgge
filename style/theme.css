@@ -72,6 +72,14 @@ body {
     background-color: var(--c1);
 }
 
+.bg-b {
+    background-color: var(--b);
+}
+
+.bg-l1 {
+    background-color: var(--cl1);
+}
+
 .bg-2 {
     background-color: var(--c2);
 }
@@ -101,4 +109,5 @@ body {
 .fill-hover-4:hover,
 .fill-hover-4:focus {
     fill: var(--c4);
+    color: var(--c4);
 }

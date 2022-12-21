@@ -304,6 +304,47 @@ html {
     cursor: pointer;
 }
 
+/*                   Projects
+====================         ====================*/
+
+.projects {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+}
+
+.project {
+    width: 40em;
+    border-radius: 1em;
+    margin: 1em;
+
+    transition: 1s;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+.project .content {
+    padding: 0.5em;
+    border-radius: 1em;
+    background-color: #333;
+}
+
+.project .content h1 {
+    margin: 10px;
+}
+
+.project .content p {
+    margin: 10px;
+}
+
+.project:hover {
+    transform: translateY(-1em);
+}
+
 /*                   Media
 ====================         ====================*/
 
@@ -332,6 +373,12 @@ html {
     }
     .box-image {
         display: none;
+    }
+    .projects {
+        flex-direction: column;
+    }
+    .project {
+        width: 100%;
     }
 }
 @media (max-width: 50em) {
