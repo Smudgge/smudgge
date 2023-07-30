@@ -312,6 +312,7 @@ html {
     align-items: center;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .project {
