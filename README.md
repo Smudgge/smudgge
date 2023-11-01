@@ -9,5 +9,3 @@
 #                                                      d"     YD            
 #                                                      "Y88888P'            
 ```
-
-![Smuddgge's GitHub stats](https://github-readme-stats.vercel.app/api?username=Smuddgge&show_icons=true&theme=dark)
